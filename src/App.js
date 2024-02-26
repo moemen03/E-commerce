@@ -1,5 +1,5 @@
 import "./App.scss";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
@@ -27,7 +27,7 @@ import Profile from "./components/Profile/Profile";
 
 const queryClient = new QueryClient();
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
   {
     path: "/",
     element: <Layout />,
